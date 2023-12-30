@@ -60,7 +60,7 @@ export const CreateBook = () => {
       review
     }
 
-    if(title === ''){
+    if(title.length === ''){
       Swal.fire({
         icon: "error",
         title: "Titulo del libro obligatorio",
