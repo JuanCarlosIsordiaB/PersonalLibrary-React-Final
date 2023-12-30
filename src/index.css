@@ -1,0 +1,414 @@
+body {
+  background-color: #242424;
+  color: rgba(255, 255, 255, 0.87);
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
+/* Styles NavBar */
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 5rem 1rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.navbar span {
+  color: #ffd700; /* Color dorado, puedes cambiarlo según tus preferencias */
+}
+
+.navbar-links {
+  display: flex;
+}
+
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 16px;
+  position: relative;
+}
+
+.navbar-links a:hover::after {
+  content: '';
+  display: block;
+  border-bottom: 2px solid #ffd700; 
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* End Styles NavBar */
+
+/* Form Create New Book */
+
+.color{
+  color: #ffd700;
+}
+
+.form-container {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  
+}
+
+
+
+.form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rem;
+  padding: 5rem;
+}
+
+.form-container p {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  font-size: 3rem;
+  font-weight: 900;
+  color: rgb(255, 255, 255);
+}
+.form-title{
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  font-weight: 900;
+  color: rgb(255, 255, 255);
+}
+
+
+
+.form-container .input {
+  padding: 10px;
+  height: 35px;
+  border: none;
+  background-color: rgb(224, 231, 236);
+}
+
+.form-container .input:focus {
+  outline: none;
+}
+
+.form-container button {
+  border: none;
+  height: 35px;
+  margin-top: 30px;
+  background-color: #ffd700;
+  color: white;
+  font-size: 16px;
+  font-weight: 4rem;
+
+}
+
+.form-container button:hover{
+  cursor: pointer;
+  background-color: #ffd799;
+}
+
+.form-extra{
+  margin-top: 2rem;
+}
+
+.form-extra input{
+  padding: 1rem;
+}
+
+
+/* checkbox settings 👇 */
+
+.ui-checkbox {
+  margin-left: 3rem;
+
+  --primary-color: #ffd700;
+  --secondary-color: #fff;
+  --primary-hover-color: #ffd777;
+  /* checkbox */
+  --checkbox-diameter: 20px;
+  --checkbox-border-radius: 5px;
+  --checkbox-border-color: #d9d9d9;
+  --checkbox-border-width: 1px;
+  --checkbox-border-style: solid;
+  /* checkmark */
+  --checkmark-size: 1.2;
+}
+
+.ui-checkbox, 
+.ui-checkbox *, 
+.ui-checkbox *::before, 
+.ui-checkbox *::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.ui-checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: var(--checkbox-diameter);
+  height: var(--checkbox-diameter);
+  border-radius: var(--checkbox-border-radius);
+  background: var(--secondary-color);
+  border: var(--checkbox-border-width) var(--checkbox-border-style) var(--checkbox-border-color);
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+
+.ui-checkbox::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-box-shadow: 0 0 0 calc(var(--checkbox-diameter) / 2.5) var(--primary-color);
+  box-shadow: 0 0 0 calc(var(--checkbox-diameter) / 2.5) var(--primary-color);
+  border-radius: inherit;
+  opacity: 0;
+  -webkit-transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+  -o-transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+  transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+}
+
+.ui-checkbox::before {
+  top: 40%;
+  left: 50%;
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 7px;
+  border-right: 2px solid var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
+  -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(0);
+  -ms-transform: translate(-50%, -50%) rotate(45deg) scale(0);
+  transform: translate(-50%, -50%) rotate(45deg) scale(0);
+  opacity: 0;
+  -webkit-transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6),opacity 0.1s;
+  -o-transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6),opacity 0.1s;
+  transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6),opacity 0.1s;
+}
+
+/* actions */
+
+.ui-checkbox:hover {
+  border-color: var(--primary-color);
+}
+
+.ui-checkbox:checked {
+  background: var(--primary-color);
+  border-color: transparent;
+}
+
+.ui-checkbox:checked::before {
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(var(--checkmark-size));
+  -ms-transform: translate(-50%, -50%) rotate(45deg) scale(var(--checkmark-size));
+  transform: translate(-50%, -50%) rotate(45deg) scale(var(--checkmark-size));
+  -webkit-transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+  -o-transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+  transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+}
+
+.ui-checkbox:active:not(:checked)::after {
+  -webkit-transition: none;
+  -o-transition: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  transition: none;
+  opacity: 1;
+}
+.cover-input{
+  background-color: #ffd700;
+  margin-left: 1rem;
+  color: #333;
+  border-radius: 1rem;
+}
+
+
+/* End Create New Book */
+
+/* Index de Books */
+.content-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.books-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+/* Agregar un estilo específico para dispositivos móviles */
+@media (max-width: 767px) {
+  .books-container {
+    grid-template-columns: 1fr;
+  }
+}
+/* End Index de Books */
+
+/* Estilos individuales libros en Index */
+
+.book-container {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  background-color: #fff;
+}
+
+.book-image {
+  width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+  height: auto; /* Mantén la proporción original de la imagen */
+}
+
+.book-details {
+  padding: 12px;
+}
+
+.book-title {
+  color: #242424;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.book-author {
+  font-size: 14px;
+  color: #888;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 767px) {
+
+  .title-index{
+    margin-left: 3rem;
+  }
+
+  .book-container{
+    margin: 3rem;
+  }
+  .book-image {
+    max-width: 100%; /* Ajusta el tamaño máximo de la imagen en dispositivos móviles */
+  }
+
+  .book-title {
+    font-size: 14px; /* Reduce el tamaño del título en dispositivos móviles */
+  }
+
+  .book-author {
+    font-size: 12px; /* Reduce el tamaño del autor en dispositivos móviles */
+  }
+}
+
+/* Book.css */
+
+/* ... estilos anteriores ... */
+
+/* Estilos específicos para libros completos */
+.book-container.complete {
+  border-color: #4caf50;
+}
+
+/* Estilos específicos para libros incompletos */
+.book-container.incomplete {
+  border-color: #f44336;
+}
+
+.complete-badge {
+  margin-top: 1rem;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+/* View.css */
+
+.book-details {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cover-container {
+  margin-bottom: 16px;
+}
+
+.cover-image {
+  width: 100%;
+  height: auto;
+}
+
+.author {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.intro {
+  margin-bottom: 16px;
+}
+
+.status {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.completed {
+  color: #4caf50; /* verde */
+}
+
+.incomplete {
+  color: #f44336; /* rojo */
+}
+
+.review {
+  margin-bottom: 16px;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 767px) {
+  .author {
+    font-size: 16px;
+  }
+}
+
+
+/* End */
+
+
+
+
+
